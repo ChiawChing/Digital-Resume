@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Write Blog - CHIAW CHING</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CHIAW CHING</h1>
+    <nav aria-label="Main navigation">
+      <a href="final.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <div class="card">
+      <h2 class="section-title">Write a New Blog Post</h2>
+      <p class="contact-text">Fill out the form below to create your blog post 📝</p>
+
+      <form class="contact-form">
+        <input type="text" name="title" placeholder="Blog Title" required />
+        <textarea name="content" rows="6" placeholder="Write your blog content here..." required></textarea>
+        <button type="submit" class="btn" disabled>Submit </button>
+      </form>
+
+      <!-- Back to Blog Link -->
+      <p style="margin-top: 1.5rem;">
+        <a href="blog.html" style="text-decoration: none; color: #a389d4;">← Back to Blog</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 CHUNG CHIAW CHING. All Rights Reserved.
+  </footer>
+</body>
+</html>

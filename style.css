@@ -1,0 +1,551 @@
+/* ========== 🌸 1. 全局变量与基础设置 ========== */
+:root {
+  --light-purple: #F5F0FA;
+  --soft-purple: #EDE4F5;
+  --accent-purple: #DCCEF9;
+  --text-dark: #4B3F72;
+  --text-muted: #7A6DAB;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--light-purple);
+  color: var(--text-dark);
+}
+
+
+/* ========== 🔝 2. Header 导航栏 ========== */
+header {
+  background: var(--white);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 8px rgba(150, 130, 200, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--text-dark);
+}
+
+
+/* ========== 🧱 3. 通用 Section 和标题样式 ========== */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2, .section-title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+/* ========== 🏠 4. 首页样式 ========== */
+.home {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.home h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+
+/* ========== 💡 5. 卡片组件 ========== */
+.card {
+  background: var(--card-bg, #fbf9ff);
+  box-shadow: 0 8px 20px rgba(180, 160, 255, 0.15);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+
+/* ========== 🛠️ 6. 技能区块 ========== */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skill {
+  background: var(--soft-purple);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skill span, .skill-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #4b4b4b;
+}
+
+.skill-bar, .skills-bar {
+  background-color: #e0d7ec;
+  border-radius: 25px;
+  height: 24px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 5px rgba(160, 120, 190, 0.08);
+  margin-bottom: 15px;
+}
+
+.skill-fill, .skills-bar-fill {
+  background: linear-gradient(to right, #b195dc, #c8adef, #e5d9f7);
+  height: 100%;
+  color: #fff;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  border-radius: 50px;
+  transition: width 1.2s ease-in-out;
+  font-weight: 500;
+  animation: fillBar 1.2s ease-out;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+}
+
+
+/* ========== 🧍‍♀️ 7. About 关于我区块 ========== */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-photo {
+  width: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(168, 138, 196, 0.25);
+}
+
+.about-info {
+  flex: 1;
+  color: #555;
+}
+
+.about-info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+ 
+}
+
+.about2 {
+  background: var(--card-bg, #fbf9ff);
+  box-shadow: 0 8px 20px rgba(180, 160, 255, 0.15);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about {
+  padding: 60px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* ========== 📫 8. 联系表单 ========== */
+.contact {
+  background: #f6f2fb;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.contact-text {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: none;
+  box-shadow: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: border 0.3s ease;
+  box-shadow: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #a88ac4;
+  box-shadow: 0 0 0 3px rgba(168, 138, 196, 0.15);
+}
+
+.contact-form button {
+  background-color: #a7b0f5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.contact-form button:hover {
+  background-color: #8d9ae0;
+}
+
+
+/* ========== 🎨 9. Portfolio 作品区块 ========== */
+.portfolio-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(168, 138, 196, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(168, 138, 196, 0.15);
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* ========== 📝 10. Quote 名言区块 ========== */
+.quote {
+  font-style: italic;
+  color: var(--text-muted);
+  background: #f0eafd;
+  padding: 1.2rem 1.5rem;
+  border-left: 6px solid #c3aef2;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 700px;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(180, 160, 255, 0.08);
+}
+
+
+/* ========== 🌟 11. 通用按钮样式 ========== */
+.btn {
+  display: inline-block;
+  background: linear-gradient(to right, #c4b0e2, #d9c7f5);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(160, 120, 190, 0.2);
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #b095d9, #cbb4f1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(160, 120, 190, 0.25);
+}
+
+
+/* ========== ⚓ 12. Footer 页脚 ========== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+
+/* ========== ⚓ 13. Blog 博客 ========== */
+.blog-form {
+  background: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.blog-form h3 {
+  margin-bottom: 1rem;
+}
+
+.blog-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.blog-form input,
+.blog-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0.5rem;
+}
+
+.blog-form button {
+  margin-top: 1rem;
+  background-color: #aaa;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: not-allowed;
+  font-weight: 600;
+}
+
+.blog h2,
+.blog h3,
+.blog p {
+  margin-bottom: 1rem; /* 每段文字下面加点空间 */
+}
+
+.blog article {
+  margin-bottom: 2rem; /* 每篇文章之间拉开距离 */
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.blog h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.blog h3 {
+  font-size: 1.4rem;
+  color: #6a4ec9;
+  margin-top: 0;
+}
+
+.blog p {
+  line-height: 1.6;
+  color: #444;
+}
+
+.blog a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #6a4ec9;
+  text-decoration: none;
+}
+
+.blog a:hover {
+  text-decoration: underline;
+}
+
+
+.btn {
+  display: inline-block;
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #357ab8;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn.top-right {
+  background-color: #4a90e2;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn.top-right:hover {
+  background-color: #357ab8;
+}
+
+/* 输入框和文本框样式 */
+.blog-form input[type="text"],
+.blog-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.blog-form input[type="text"]:focus,
+.blog-form textarea:focus {
+  border-color: #a389d4;
+  box-shadow: 0 0 0 3px rgba(163, 137, 212, 0.2);
+  outline: none;
+}
+
+/* 按钮样式 */
+.blog-form button {
+  background-color: #a389d4; /* 淡紫色 */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: not-allowed; /* 你目前是 disabled 状态 */
+  opacity: 0.6;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.blog-form button:hover {
+  background-color: #916bc7;
+}
+
+/* 如果未来你启用按钮，可以这样设置 enabled 状态的样式 */
+.blog-form button:enabled {
+  cursor: pointer;
+  opacity: 1;
+}
+
+
+/* Blog Post Pages */
+.blog-post {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.blog-post .card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+}
+
+.blog-post h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-post em {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.blog-post p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 1.2rem 0;
+}
+
+.blog-post a {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  background-color: #a389d4; /* 绿色按钮 */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.blog-post a:hover {
+  background-color: #388E3C;
+}
